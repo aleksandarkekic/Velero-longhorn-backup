@@ -26,7 +26,7 @@ Velero cannot directly copy data from Longhorn volumes to object storage. Instea
       -**Longhorn, if properly configured, stores the snapshot in an S3 bucket.** \
 
 ---
-**The installation of the MinIO service on Linux is explained here:** https://github.com/aleksandarkekic/Install-MiniO-on-Ubuntu
+**The installation of the MinIO on Ubuntu is explained here:** https://github.com/aleksandarkekic/Install-MiniO-on-Ubuntu
 
 ---
 **Here is the configuration of Longhorn to use MinIO S3 for backups:** https://www.civo.com/learn/backup-longhorn-volumes-to-a-minio-s3-bucket
