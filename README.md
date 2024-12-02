@@ -25,10 +25,10 @@ Velero cannot directly copy data from Longhorn volumes to object storage. Instea
       -**Longhorn recognizes the request and creates a volume snapshot.** \
       -**Longhorn, if properly configured, stores the snapshot in an S3 bucket.** \
 
-
+---
 **The installation of the MinIO service on Linux is explained here:** https://github.com/aleksandarkekic/Install-MiniO-on-Ubuntu
 
-
+---
 **Here is the configuration of Longhorn to use MinIO S3 for backups:** https://www.civo.com/learn/backup-longhorn-volumes-to-a-minio-s3-bucket
 
 # Snapshot Controller and CSI Snapshot CRDs \
@@ -52,6 +52,8 @@ parameters:
 ```
 To make Velero create the VolumeSnapshots with our VolumeSnapshotClass we need the label **velero.io/csi-volumesnapshot-class: "true".**
 Under parameters, we specify**type: bak**, which tells Longhorn that we want to make a Longhorn backup. An alternative would be type: snap for Longhorn snapshots (incremental backups, not to be confused with VolumeSnapshots). However, these do not yet have CSI support, so cannot be used here \
+
+---
 # Velero
 ```bash
 # Install Velero CLI
