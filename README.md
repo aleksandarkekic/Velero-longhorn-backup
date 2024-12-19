@@ -69,10 +69,10 @@ aws_secret_access_key = minio123
 EOF
 
 velero install --provider velero.io/aws \
- --bucket velero --image velero/velero:v1.11.0 \
- --plugins velero/velero-plugin-for-aws:v1.7.0,velero/velero-plugin-for-csi:v0.4.0 \
- --backup-location-config region=minio-default,s3ForcePathStyle="true",s3Url=http://minio.minio:9000 \
+ --bucket velero \
+ --plugins velero/velero-plugin-for-aws:v1.2.1 \
+ --backup-location-config region=minio-default,s3ForcePathStyle="true",s3Url=ip_adr:port \
  --features=EnableCSI --snapshot-location-config region=minio-default \
- --use-volume-snapshots=true --secret-file=./credential-velero
+ --secret-file=./credential-velero \
 
 
